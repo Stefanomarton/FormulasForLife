@@ -11,10 +11,42 @@
 \usepackage{graphicx}
 \setlength{\columnseprule}{0.4pt}
 \usepackage{multicol}
+\usepackage{titlesec}
+\setlength\columnsep{38pt}
 \usepackage{setspace} 
+\usepackage{etoolbox}
+\definecolor{gray75}{gray}{0.75}
+%\DeclareMathSizes{12}{19}{13}{9}      % For size 11 text
+
+\makeatletter
+%\renewcommand{\@seccntformat}[1]{}
+\makeatother
+ 
+\makeatletter
+
+
+
+\patchcmd{\l@section}
+  {\hfil}
+  {\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep     mu$}\hfill}
+  {}{}
+
+\renewcommand\tableofcontents{%
+    \begin{multicols}{2}[\section*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}]%
+    \@starttoc{toc}%
+    \end{multicols}%
+    }
+
+\makeatother %print dots in sections in toc.
 %---------------------------------------------------------------------------%
 
 
+\titleformat{\chapter}
+  {\normalfont\huge\bfseries}{\thechapter}{1em}{}
+
+\titlespacing*{\chapter}{0pt}{0pt}{20pt}
 \begin{document}
 
 \begin{titlepage}
@@ -26,7 +58,7 @@
             
         \vspace{0.5cm}
         \LARGE
-        All you'll ever need
+        All formulas you'll ever need
             
         \vspace{1.5cm}
             
@@ -34,49 +66,249 @@
             
         \vfill
             
-        An helpful tool for scientific studies   
-       
+        A helpful tool for scientific studies   
             
         \vspace{0.8cm}
-            
             
     \end{center}
 \end{titlepage}
 
 \pagenumbering{gobble}
-\normalsize
-\doublespacing
+\small
 \setcounter{tocdepth}{2}
 \tableofcontents
-\newpage
-\singlespacing
-\normalsize
+\normalsize 
 \pagenumbering{arabic}
-\begin{center}
+
+\chapter{Statistics}
+
+  \begin{multicols}{2}
+    \section{Mean}
+      \subsection{Arithmetic mean}
+      $$\overline{x}= \sum_{i=1}^n \frac{x_i}{N}$$ 
+      \subsection{Geometric mean}
+      $$\overline{x}=(\prod_{i=1}^n x_i)^\frac{1}{n}$$
+      \subsection{Harmonic mean}
+      $$\overline{x}=n(\sum^n _{i=1} \frac{1}{x_i}^{-1})$$
+    \section{Standard Deviation}
+      \subsection{Absolute}
+      $$s=\sqrt{\frac{\sum_{i=1}^n (x_i - \overline{x})^2}{N-1}} $$
+      \subsection{Relative}
+      $$RSD= \frac{s}{\overline{x}}$$
+  \end{multicols}
+
+\chapter{Pure Physics}
+
+\chapter{Pure Chemistry}
+
+  \begin{multicols}{2}
+
+    \section{Concentration}
+        \subsection{Molarity}
+        $$M=\frac{n}{V}$$
+
+  \end{multicols}
+
+        \subsection{Mole} 
+
+\chapter{Thermodynamics}
+
+  \begin{multicols}{2}
+
+    \section{Perfect gases}
+        \subsection{State equation}
+      \begin{gather*}
+        pV = nRT\\
+        pV_{m} = RT
+      \end{gather*}
+        \subsection{Properties}
+        \subsubsection{Molar mass}  
+         $$ d_{gas} \cdot V_{m} = MW $$
+        \subsubsection{Boyle's law}
+        $$ p_1 V_1 = p_2 V_2 $$
+        \subsubsection{Charle's law}
+        $$ \frac{V_1}{T_1} = \frac{V_2}{T_2} $$
+        \subsubsection{Gay-Lussac's Law}
+        $$ \frac{p_1}{T_1} = \frac{p_2}{T_2} $$
+
+    \section{Real gases}
+        \subsection{Virial equation}
+
+        \[
+        pV_{m}=RT\left( 1+\frac{B}{V_{m}}+\frac{C}{V^{2}_{m}}+\dots \right) 
+        \] 
+
+        \subsection{van der Waals equation}
+        \begin{gather*}
+          p = \frac{nRT}{V-nb} - a \left(\frac{n}{V} \right) ^{2}  \\
+          p = \frac{nRT}{V_{m} - b } - a \left(\frac{1}{V_{m} }  \right)^{2} 
+        \end{gather*}
+
+    \section{Internal Energy}
+    \begin{gather*}
+    dU = \delta w + \delta q \\
+    dU = TdS - pdV 
+    \end{gather*}
     
-\chapter{Physics}
-\end{center}
+    \section{Entalphy}
+             $$ H = U + pV $$
 
-\section{Termodinamycs}
-\begin{multicols}{2}
+      \subsection{T dependence}
+      \subsubsection{Pure substance}
+      \[
+        \Delta H(T_2) = \Delta H(T_1) + \int _{T_1} ^{T_2} C_{p}dT\\
+      .\] 
+    \subsubsection{Chemical reaction}
+    \begin{gather*}
+        \Delta (T_2) = \Delta H_{r}T_1 = \Delta C_{p}(T_2 - T_1)\\
+        \Delta C_{p} = [c C_{p,C} + d C_{p,D}] - [a C_{p,A} + b C_{p,B}] \\
+    \end{gather*}
 
-\subsection{Prova}
+    \section{Entropy} 
 
-\end{multicols}
+    \begin{gather*}
+       \Delta S_{TOT} \geq 0 \\  
+       \Delta S  = \frac{q}{T} \implies \Delta S = \int _{i} ^{f} \frac{q_{rev}}{T}
+     \end{gather*} 
+    For an ideal gas it can be simplified:
+    \[
+      \Delta S = nC_{m}\ln \left( \frac{T_{f}}{T_{i} }  \right) + nR\ln \left( \frac{V_{f}}{V_{i} }  \right)  
+    \]
 
-\section{Termodinamycs}
-\begin{multicols}{2}
+    \subsection{T dependence}
+      \subsubsection{Constant pressure}
+        \[
+          \Delta S = S(T_{f}) - S(T_{i}) = C_{p}\int_{i}^{f} \frac{dT}{T} = C_{p}\ln \left( \frac{T_{f}}{T_{i} }  \right)  
+        \] 
+      \subsubsection{Constant volume} 
+        \[
+          \Delta S = S(T_{f}) - S(T_{i}) = C_{v}\int_{i}^{f} \frac{dT}{T} = C_{v}\ln \left( \frac{T_{f}}{T_{i} }  \right)  
+        \] 
+      \section{Isothermal Transformations} 
+        \subsection{Free expansion}
+          \begin{gather*}
+            \Delta T = 0 \implies \Delta U = 0 \implies q = w\\
+            w = q = - p_{ext} \Delta V = 0\\
+            \Delta H = \Delta PV \text{ (0 for perfect gas)}\\
+            \Delta S = nR\ln (\frac{V_f}{V_i}) ~ ~ ~\Delta S' = 0 ~ ~ ~ \Delta S_{tot} = \Delta S
+          \end{gather*}
 
-\subsubsection{Prova}
-\subsubsection{Prova}
-\subsubsection{Prova}
-\subsubsection{Prova}
-\subsubsection{Prova}
-\end{multicols}
+        \subsection{Expansion vs. $p_{ext}$}
+          \begin{gather*}
+            \Delta T = 0 \implies \Delta U = 0 \implies q = w\\
+            w = q = -p_{ext} \Delta V \\
+            \Delta H = \Delta PV \text{ (0 for perfect gas)}\\
+            \Delta S = nR\ln (\frac{V_f}{V_i}) ~ ~ ~\Delta S' = \frac{-q_{sistema}}{T} ~ ~ ~ \Delta S_{tot} = \Delta S + \Delta S'
+          \end{gather*}
 
-\begin{center}
-    \chapter{Chemistry}
-\end{center}
+        \subsection{Reversible expansion}
+          \begin{gather*}
+            \Delta T = 0 \implies \Delta U = 0 \implies q = w\\
+            q = w = -nRT\ln (\frac{V_f}{V_i})\\
+            \Delta H = \Delta PV\text{ (0 for perfect gas)}\\
+            \Delta S = nR \ln (\frac{V_f}{V_i}) ~ ~ ~\Delta S' = - nR\ln (\frac{V_f}{V_i}) \implies \Delta S_{tot} = 0
+          \end{gather*}
 
+      \section{Adiabatic Transformations}
 
-\end{document}
+          \begin{gather*}
+            dU = dw \\
+            C_{v}dT = -pdV \\
+            w_{Adiabatic} = nC_{V,m}\Delta T\\
+            \text{For an adiabatic process is also true that:} \\
+              \gamma = \frac{C_{p,m} }{C_{V,m} } = \frac{C_{p}  }{C_{V} } \quad P_1(V_1)_{\gamma } = P_2(V_2 )^{\gamma }  
+          \end{gather*}
+
+        \subsection{Reversible process}
+        \begin{gather*}
+          C_{V}dT = \frac{-nRT}{V}dV\\
+          \int _{T_1}^{T_2} \frac{C_{V}dT }{T}  = -nR\int _{T_1}^{T_2}\frac{dV}{V}\\
+          C_{V}\ln \left(\frac{T_1}{T_2} \right) = -R\ln \frac{V_2}{V_1} \\
+          \frac{T_2}{T_1}=\left [\frac{V_2}{V_1}\right]^{-\frac{R}{C_{V}}}
+        \end{gather*}
+
+        \subsection{Irreversible}
+        Take P as constant
+        \begin{gather*}
+          \int _{T_1}^{T_2} CvdT = -p \int _{V_1}^{V_2}dV\\
+          \text{Assuming } C_{V}= cost\\
+          C_{V}\Delta T = -p \Delta V 
+        \end{gather*}
+
+        \subsection{Free expansion}
+
+          \begin{gather*}
+            q = 0, ~ w = -p_{ext} \Delta V = 0 \implies \Delta U = 0 \\
+            \Delta H = \\
+            \Delta S = nR\ln (\frac{V_f}{V_i}) ~ ~ ~ \Delta S' = 0 ~ ~ ~ \Delta S_{tot} = 0
+          \end{gather*}
+        \subsection{Expansion vs. $p_{ext}$}
+           \begin{gather*}
+             q = 0 \implies \Delta U = w \\
+             \Delta U = nC_{V,m} \Delta T = w = -p_{ext} \Delta V \\
+             \Delta T = -\frac{p_{ext}\Delta V}{nC_{v,m}}  \\
+             \Delta H = V \Delta p \\
+             \Delta S = nC_{V,m} \ln (\frac{T_{f}}{T_{i}}) + nR\ln (\frac{V_f}{V_{i}})\\
+             \Delta S' = 0 \implies \Delta S_{TOT}= \Delta S 
+         \end{gather*}
+        \subsection{Reversible expansion}
+          \begin{gather*}
+            q = 0 \implies \Delta U = w \\
+            \Delta U = nC_{V,m} \Delta T\\
+            \Delta S = \Delta S' = \Delta _{tot} = 0
+          \end{gather*}
+      \section{Isobaric transformations}
+      \subsection{Reversible}
+        \begin{gather*}
+          q = \Delta H = nC_{p,m}\Delta T\\
+          w = -pdV\\
+          \Delta S = n C_{p,m} \ln (\frac{T_f}{T_i}) ~ ~ ~ \Delta S' = -nC_{p,m} \ln \frac{V_{f} }{V_{i}}\\
+          \implies \Delta S_{TOT} = 0 
+        \end{gather*} 
+
+    \section{Thermodynamic cycles}
+    \[
+      \Delta U = 0, ~ \Delta S = 0
+    .\] 
+
+      \subsection{Carnot cycle}
+      There is 4 stage (ABCD):
+        \subsubsection{AB Reversible Isothermal expansion}
+        \begin{gather*}
+          \Delta U = 0 \implies q_{AB} = -w_{AB}\\
+          w_{AB} = -q_{AB} = -nRT_{h}\ln \left(\frac{V_{B}}{V_{A}} \right)
+        \end{gather*}
+        \subsubsection{BC Reversible Adiabatic Expansion}
+        \begin{gather*}
+          q_{BC} = 0 \implies \Delta U_{BC} = w_{BC}\\
+          w_{BC} = nC_{V,m}(T_{C}-T_{h})  
+        \end{gather*}
+        \subsubsection{CD Reversible Isothermal compression}
+        \begin{gather*}
+          \Delta U = 0 \implies q_{CD} = -w_{CD}\\
+          w_{CD} = -q_{CD} = -nRT_{h}\ln \left (\frac{V_{D}}{V_{C}} \right )
+        \end{gather*}
+        \subsubsection{DA Reversible Adiabatic compression}
+        \begin{gather*}
+          q_{DA} = 0 \implies \Delta U_{DA} = w_{DA}\\
+          w_{DA} = nC_{V,m}(T_{C}-T_{h})  
+        \end{gather*}
+
+        
+        
+      
+
+  \end{multicols}
+
+\chapter{Radiations} 
+
+  \begin{multicols}{2}
+  
+    \section{Bragg Equation}
+
+      $$n \lambda = 2d_{hkl} \sin \theta$$
+
+ \end{multicols}
+
+\end{document} 
+
