@@ -1,0 +1,452 @@
+\documentclass[Master.tex]{subfiles}
+\begin{document}
+\begin{multicols}{2}
+
+		 \section{Uniform Rectilinear Motion}
+		  \begin{gather*}
+				   x(t) = x_0 + v_0t\\
+				   v = v_0
+		  \end{gather*}
+
+		 \section{Uniform Accelerated \\Rectilinear Motion}
+		  \begin{gather*}
+				   x(t) = x_0 + v_0t + \frac{1}{2}at^2 \implies x-x_0 = \frac{v^2-v_0^2}{2 a_0} \\
+				   v(t) = v_0 + at \\
+				   a(t) = a_0
+		  \end{gather*}
+
+		 \section{Parabolic motion}
+		  On the x axis:
+		  \begin{equation*}
+				   \begin{cases}
+						    a_{x} = 0      \\
+						    v_{x} = v_{0x} \\
+						    x(t) = x_0 + v_{0x}t
+				   \end{cases}
+		  \end{equation*}
+		  On the y axis:
+		  \begin{equation*}
+				   \begin{cases}
+						    a_{y} = a_{0y} = g  \\
+						    v_{y} = v_{0y} + gt \\
+						    y(t) = y_0 + v_{0y}t = \frac{1}{2}gt^2
+				   \end{cases}
+		  \end{equation*}
+		  The range can be calculated as:
+		  \[
+				   R = \frac{2 v_{0x}v_{oy}}{g} = \frac{v_{0}^2 sen 2 \alpha }{g}
+		  \]
+		  The maximum height can be calculated as:
+		  \[
+				   h_{max} = \frac{v_0^2 sen^2\alpha }{2g}
+		  \]
+		 \section{Uniform Circular Motion}
+		  \subsection{Angular velocity}
+
+				   \[
+						    \omega _{avg} = \frac{\theta _{2} - \theta _{1}   }{t_2 - t_1} = \frac{\Delta \theta }{\Delta t}
+				   \]
+
+		  \subsection{Angular acceleration}
+				   \[
+						    \alpha _{avg} = \frac{\omega _{2} - \omega _{1}   }{t_2 - t_1 }
+				   \]
+
+		  \subsection{Relation with linear variables}
+				   \subsubsection{Linear velocity}
+						    \[
+								     v = \omega r \quad \text{(radian measure)}
+						    \]
+
+				   \subsubsection{Linear acceleration}
+
+						    \begin{gather*}
+								     a_{tangential}  = \alpha r \quad \text{(radian measure)}\\
+								     a_{radial} = \frac{v^2}{r} = w^2r
+						    \end{gather*}
+				   \subsubsection{Period}
+						    If the point moves in uniform circular motion :
+						    \[
+								     T = \frac{2\pi r}{v} = \frac{2\pi }{\omega }
+						    \]
+
+		 \section{Rotation with constant acceleration}
+		  \begin{gather*}
+				   \omega = \omega_{0} + \alpha t \\
+				   \theta - \theta_{0 }= \omega _{0} t + \frac{1}{2} \alpha t^{2}
+		  \end{gather*}
+
+		 \section{Kinetic of rotation}
+		  \[
+				   E_{k} = \frac{1}{2}I\omega ^2
+		  \]
+
+		  I is the rotational inertia of the body; for a system of discrete particles it
+		  is defines as:
+
+		  \[
+				   I = \sum m_{i}r_{i}^2
+		  \]
+
+		  It has different formulas for different shapes
+
+		  \subsection{Armonic Motion}
+				   \[
+						    x(t) = A sen (\omega * t + \phi )
+				   \]
+
+				   It can be also calculated as:
+				   \[
+						    \omega = \sqrt{\frac{k}{m}}
+				   \]
+
+		  \subsection{Centripetal and Centrifugal acceleration}
+				   \[
+						    a_{c} = \omega^2 r = \frac{v^2}{r}
+				   \]
+
+		  \subsection{Teorema dell'impulso}
+				   \[
+						    I = \Delta p = m \Delta V = F \delta t
+				   \]
+		  \subsection{Newton Second Law's for rotation}
+				   \[
+						    \tau = I \alpha
+				   \]
+		 \section{Angular momentum}
+		  \[
+				   L = I \omega = r prodvet m \vec{v}
+		  \]
+
+		  \[
+				   \Delta L = \tau  \quad \Delta l = I vect r
+		  \]
+
+		 \section{Frictional Force}
+		  \[
+				   \vec{F_{a}} = -\mu N
+		  \]
+
+		 \section{Centripetal Force}
+		  \[
+				   F_{c} = m \frac{v^2}{r} = n \omega ^2 r
+		  \]
+
+		 \section{Rope's tension}
+		  \[
+				   I ~ \alpha = T ~ R
+		  \]
+
+		 \section{Gravitational Law}
+		  \[
+				   F = G \frac{m_1 m_2}{r^2} \quad 6.6743 \cdot 10^{11}   m^3 kg~ s^2\\
+		  \]
+
+		  Is also possible to calculate the Gravitational Acceleration
+
+		  \[
+				   g = \frac{GM}{r^2}
+		  \]
+
+		 \section{Pendulum Equation}
+		  \begin{gather*}
+				   m \frac{\mathrm{d^2x}}{\mathrm{dt^{2}}} + mg sen \theta = 0  \\
+				   \frac{\mathrm{d^2\theta }}{\mathrm{dt^{2}}} + \frac{g}{L} sen \theta = 0 \quad \implies \frac{g}{L}=\omega ^2 \\
+		  \end{gather*}
+		  If \( \theta \approx 0\) then:
+		  \[
+				   T = \frac{2\pi }{\omega } = \sqrt{\frac{L}{g}} \quad \theta (t) = \theta_{0} + \cos (\omega t + \phi )
+		  \]
+
+		 \section{Energy}
+		  \subsection{Work}
+				   \[
+						    \vec{L}= \vec{F} \cdot \Delta r = F \Delta r\cos \theta
+				   \]
+		  \subsection{Kinetic Energy}
+				   \begin{gather*}
+						    E_{c} = \frac{1}{2}mv^2 \\
+						    L = \Delta E_{c} = \frac{1}{2}mv_{f} ^2 - \frac{1}{2}mv_{i} ^2
+				   \end{gather*}
+		  \subsection{Elastic potential energy}
+				   \[
+						    U_{el} = \frac{1}{2}kx^2
+				   \]
+
+		  \subsection{Gravitational Potential Energy}
+				   \[
+						    U_{g} = mgh
+				   \]
+
+		  \subsection{Mechanical energy}
+				   \[
+						    E_{m} = E_{c} + U
+				   \]
+		  \subsection{Power}
+				   \[
+						    P = \frac{W}{\Delta t}
+				   \]
+
+		 \section{Momentum}
+		  \[
+				   \vec{p} = m \vec{v}
+		  \]
+
+		 \section{Electrostatic}
+
+		  \subsection{Coulomb force}
+				   \[
+						    F = \frac{1}{4 \pi  \epsilon_{0} }\frac{q_{1}q_2 }{r^2}
+				   \]
+
+		  \subsection{Electric Field}
+				   \[
+						    E = \frac{F}{q_{0} }
+				   \]
+
+				   \subsubsection{Carica puntiforme}
+
+						    \[
+								     E = \frac{1}{4 \pi \epsilon_{0}  } \frac{q}{r^{2} } r
+						    \]
+
+				   \subsubsection{Distribuzione continua}
+						    \[
+								     E = \frac{1}{4 \pi  \epsilon_{0} } \int \frac{dq}{r^2} dr
+						    \]
+
+				   \subsubsection{Campo elettrico lamina}
+						    \[
+								     E = \frac{\sigma }{2 \epsilon_{0}  }
+						    \]
+
+				   \subsubsection{Campo elettrico condensatore o conduttore}
+						    \[
+								     E = \frac{\sigma }{\epsilon _{0} }
+						    \]
+
+				   \subsubsection{Dipole electric field}
+						    \[
+								     E(P) =  -\frac{1}{4 \pi  \varepsilon_{0}}  \frac{p}{R^3}
+						    \]
+						    Where p is called dipole momentum and is equal to:
+						    \[
+								     p = 2qa\hat{e}_{z}
+						    \]
+
+				   \subsubsection{Cable electric field}
+						    \[
+								     E = \frac{\Delta V}{L}
+						    \]
+
+		  \subsection{Flusso del campo elettrico}
+
+				   \[
+						    \Phi = \int E \cdot dS
+				   \]
+
+		  \subsection{Gauss Law}
+				   \[
+						    \Phi (E) =  \frac{\sum_{k=1}^{N} q_{k~int} }{\epsilon _{0} }
+				   \]
+
+		  \subsection{Potential electric energy}
+				   \begin{gather*}
+						    L_{AB} = q_{0} \int_{A}^{B} E \cdot dl = U(B) - U(A)\\
+						    L_{AB} = \sum_{k=1}^{N} [U_{k}(B)  - U_{k}(A)] \quad U_{k} = k \frac{q_0 q_{k} }{r}
+				   \end{gather*}
+
+				   \subsubsection{Spostamento lungo una lamina}
+						    \[
+								     L_{AB} = qE(r_B-r_A)
+						    \]
+
+		  \subsection{Potenziale}
+
+				   \[
+						    V_{k} = k \frac{q_{k} }{r} \quad U = q_{0} V
+				   \]
+
+		  \subsection{Capacità di un condensatore}
+
+				   \begin{gather*}
+						    C = \frac{q}{V} \quad [C] = \frac{C}{V} = Farad  \\
+						    C = \varepsilon_{0}   \frac{A}{d}
+				   \end{gather*}
+
+				   \subsubsection{Condensatori in serie}
+						    \[
+								     \frac{1}{C_{eq}}= \frac{1}{C_1} + \frac{1}{C_2}
+						    \]
+
+				   \subsubsection{Condensatori in parallelo}
+						    \[
+								     C_{eq} = \sum_{i=1}^{N} C_{i}
+						    \]
+
+				   \subsubsection{Stored energy}
+						    \begin{gather*}
+								     \Delta U = \frac{1}{2}CV^2\\
+								     \Delta U =  \frac{1}{2} \varepsilon_{0} A E^2 d
+						    \end{gather*}
+
+		  \subsection{Dielectric Properties}
+				   The relative Dielectric constant is calculated as:
+				   \[
+						    \varepsilon = \frac{V_{0}}{V}
+				   \]
+				   Where \( V_{0} \) is the Potential measured in empty space. It can be useful to
+				   calculate capacitor capacity, considering different material between the two
+				   PIASTRE.
+
+				   \[
+						    C = C_{0} \varepsilon_{r}
+				   \]
+
+		  \subsection{Electric Current}
+				   \begin{gather*}
+						    I = \frac{dq}{dt} \quad [I] = \frac{C}{s} = Ampere
+				   \end{gather*}
+				   It can be expressed in function to the number of charge carriage
+				   \[
+						    I = nqAv_{d}
+				   \]
+
+				   \subsubsection{Electric Density}
+
+						    \begin{gather*}
+								     j = n q v_{d} \\
+								     I = \int J \cdot \hat{n} dS\\
+								     \Phi (j) = I = \int J \cos \theta dS
+						    \end{gather*}
+
+		  \subsection{Ohm's Law}
+				   The general expression can be written as:
+				   \[
+						    j = \sigma E
+				   \]
+				   Where \( \sigma \) is the conductivity. For a wire it can be written as
+				   follows:
+				   \begin{equation*}
+						    \begin{cases}
+								     \Delta V = R I       \\
+								     R = \rho \frac{l}{A} \\
+						    \end{cases}
+				   \end{equation*}
+				   Where \( \rho  \) is equal to \( \frac{1}{\sigma } \) and it is called resistivity
+				   \subsubsection{Resistor in series}
+						    \[
+								     R_{eq} = \sum_{i = 1}^{N} R_{i}
+						    \]
+
+				   \subsubsection{Resistor in parallel}
+						    \[
+								     \frac{1}{R_{eq}} = \sum_{i = 1}^{N} \frac{1}{ R_{i}  }
+						    \]
+
+				   \subsubsection{Circuit fem}
+						    \[
+								     RI = \Delta V = \varepsilon -rI
+						    \]
+						    Where r is the circuit resistance
+
+		  \subsection{Power and Joule's effect}
+				   \begin{gather*}
+						    P = \frac{dU}{dT} = \frac{dq}{dt} \Delta V = I \Delta V \\
+				   \end{gather*}
+				   Using Ohm's law it can be rewritten as:
+				   \[
+						    P = R I^2
+				   \] n The energy dissipated by a resistor is equal to:
+				   \[
+						    E_{d}  = \frac{1}{2}C \varepsilon ^2
+				   \]
+
+		 \section{Magnetism}
+
+		  \subsection{Lorentz force}
+				   A particle of charge q moving with a velocity v in an electric field E and a
+				   magnetic field B experiences a force equal to:
+				   \[
+						    \vec{F}  =q \vec{v}  \times \vec{B}
+				   \]
+				   For a wire it can be also calculated as:
+				   \[
+						    \vec{F} = \vec{B} I L
+				   \]
+				   seconda legge di la place
+
+		  \subsection{La Place Law}
+				   \begin{gather*}
+						    d\vec{B} = \frac{\mu_{0}}{4 \pi } \frac{I}{r^2} d\vec{l} \times \hat{r} \\
+						    \vec{B}(P) = \int d\vec{B}\\
+						    |d\vec{B}| = \frac{\mu _{0} }{4\pi} ~\frac{I}{r^2}~d\vec{l}~ sen \theta
+				   \end{gather*}
+
+		  \subsection{Ampere teoreme}
+				   \subsubsection{Solenoide}
+
+						    \[
+								     B = \mu _{0}~I~\frac{N}{L}
+						    \]
+
+				   \subsubsection{Wire}
+						    \[
+								     B = \mu_{0}\frac{I}{2\pi r}
+						    \]
+		  \subsection{Magnetic Flux}
+				   \[
+						    \Phi _{B} = N \int \vec{B} \cdot d \vec{\sigma} = NBS \cos \alpha
+				   \]
+				   For a rotational motion dependence
+				   \[
+						    \Psi = BS\cos \omega t
+				   \]
+
+		  \subsection{Electromagnetic induction}
+				   Is also known as Faraday-Newman-Lentz Law
+				   \[
+						    \varepsilon = - \frac{\mathrm{d\Phi}}{\mathrm{dt}}
+				   \]
+				   The inductive effect can also be expressed as
+				   \[
+						    \varepsilon_{L} = -L = \frac{\mathrm{di}}{\mathrm{dt}}
+				   \]
+				   For a solenoid is true that:
+				   \[
+						    L = \mu _{0} \left(  \frac{N}{L}   \right) ^2 V
+				   \]
+				   Where V is the volume included in the solenoid. The relationship can be also
+				   writte as:
+				   \begin{gather*}
+						    \frac{\mathrm{d\Phi }}{\mathrm{dt}} = L \frac{\mathrm{dI}}{\mathrm{dt}} \\
+						    L = \frac{\mathrm{d\Phi }}{\mathrm{dI}}
+				   \end{gather*}
+				   \subsubsection{For variable area}
+						    \begin{gather*}
+								     \varepsilon = \frac{d\Phi }{dt} = \frac{B dS}{dt} = B \frac{l dx}{dt} =  B l v
+						    \end{gather*}
+
+				   \subsubsection{For a variable area dependent on circular motion}
+						    \[
+								     \varepsilon = \omega BS \sin \omega t
+						    \]
+
+		  \subsection{Magnetic Energy}
+				   \[
+						    U_{m} = \frac{1}{2}LI^{2}
+				   \]
+
+		  \subsection{LC Circuit}
+				   \[
+						    q(t) = q_0 \cos (\omega t + \phi ) \quad \frac{1}{\sqrt{LC} }
+				   \]
+
+		  \subsection{LR Circuit}
+				   \[
+						    i(t) = - \frac{\varepsilon_{0}}{R}[1 - e^{-\frac{R}{L}t}]
+				   \]
+
+		  \subsection{}
+\end{multicols}
+\end{document}

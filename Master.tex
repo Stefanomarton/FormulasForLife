@@ -1,0 +1,83 @@
+%++++++++++++++++++++++++++++++++++++++++
+\documentclass[a4,11pt]{report}
+\usepackage{Preamble}
+%++++++++++++++++++++++++++++++++++++++++
+\makeatletter
+%\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\makeatletter
+
+\patchcmd{\l@section}
+{\hfil}
+{\leaders\hbox{\normalfont$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep     mu$} \hfill}
+{}{}
+
+\renewcommand\tableofcontents{%
+		 \begin{multicols}{2}[\section*{\contentsname
+				     \@mkboth{%
+						      \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}]%
+				   \@starttoc{toc}%
+		 \end{multicols}%
+}
+
+\makeatother %print dots in sections in toc.
+%---------------------------------------------------------------------------%
+
+\titleformat{\chapter}
+ {\normalfont\huge\bfseries}{\thechapter}{1em}{}
+
+ \titlespacing*{\chapter}{0pt}{0pt}{20pt}
+
+ \lhead{}
+
+ \begin{document}
+
+ \begin{titlepage}
+		  \begin{center}
+				   \vspace*{6cm}
+
+				   \Huge
+				   \textbf{FORMULAS FOR LIFE}
+
+				   \vspace{0.5cm}
+				   \LARGE
+				   All formulas you'll ever need
+
+				   \vspace{1.5cm}
+
+				   \textbf{Stefano Marton}
+
+				   \vfill
+
+				   A helpful tool for scientific studies
+
+				   \vspace{0.8cm}
+
+		  \end{center}
+ \end{titlepage}
+
+ \tableofcontents
+
+ \chapter{Statistics}
+  \subfile{Statistics.tex}
+
+ \chapter{PurePhysics}
+  \subfile{PurePhysics.tex}
+
+ \chapter{PureChemistry}
+  \subfile{PureChemistry.tex}
+
+ \chapter{Thermodynamics}
+  \subfile{Thermodynamics.tex}
+
+ \chapter{Chemical Kinetics}
+  \subfile{ChemicalKinetics.tex}
+
+ \chapter{Electrochemistry}
+  \subfile{Electrochemistry.tex}
+
+ \chapter{Wape Phenomena}
+  \subfile{Waves.tex}
+
+ \end{document}
