@@ -1,4 +1,4 @@
-\documentclass[Master.tex]{subfiles}
+\documentclass[../Master.tex]{subfiles}
 \begin{document}
 \begin{multicols}{2}
 		 \section{Reaction rate}
@@ -7,6 +7,23 @@
 				   r = \frac{dx}{dt} = \frac{1}{\nu _{B} } \frac{dCb}{dt}
 		  \]
 		 \section{First order reactions}
+		  \begin{center}
+				   \begin{tikzpicture}
+						    \begin{axis}[
+										      height=5cm,
+										      xmin=0, xmax=8, % x scale
+										      ymin=0, ymax=8, % y scale
+										      domain=0:10,
+										      samples=101,
+										      smooth,
+										      no markers,
+										      % x label style={at={(axis description cs:0.5,-0.1)},anchor=north},
+										      y label style={at={(axis description cs:0.07,0.5)}}, xlabel={t / s},
+										      ylabel={ln[A]}] ] \addplot {-x + 6};
+						    \end{axis}
+				   \end{tikzpicture}
+				   \vspace{-1cm}
+		  \end{center}
 		  \begin{gather*}
 				   A \to P \\
 				   r = -\frac{dC_{A}}{dt} = k[A]\\
