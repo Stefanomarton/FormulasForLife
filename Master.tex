@@ -13,70 +13,70 @@
 {}{}
 
 \renewcommand\tableofcontents{%
-	\begin{multicols}{2}[\section*{\contentsname
-			  \@mkboth{%
-				  \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}]%
-		\@starttoc{toc}%
-	\end{multicols}%
+		 \begin{multicols}{2}[\section*{\contentsname
+				     \@mkboth{%
+						      \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}]%
+				   \@starttoc{toc}%
+		 \end{multicols}%
 }
 
 \makeatother %print dots in sections in toc.
 %---------------------------------------------------------------------------%
 
 \titleformat{\chapter}
-{\normalfont\huge\bfseries}{\thechapter}{1em}{}
+ {\normalfont\huge\bfseries}{\thechapter}{1em}{}
 
-\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+ \titlespacing*{\chapter}{0pt}{0pt}{20pt}
 
-\lhead{}
+ \lhead{}
 
-\begin{document}
+ \begin{document}
 
-\begin{titlepage}
-	\begin{center}
-		\vspace*{6cm}
+ \begin{titlepage}
+		  \begin{center}
+				   \vspace*{6cm}
 
-		\Huge
-		\textbf{FORMULAS FOR LIFE}
+				   \Huge
+				   \textbf{FORMULAS FOR LIFE}
 
-		\vspace{0.5cm}
-		\LARGE
-		All formulas you'll ever need
+				   \vspace{0.5cm}
+				   \LARGE
+				   All formulas you'll ever need
 
-		\vspace{1.5cm}
+				   \vspace{1.5cm}
 
-		\textbf{Stefano Marton}
+				   \textbf{Stefano Marton}
 
-		\vfill
+				   \vfill
 
-		A helpful tool for scientific studies
+				   A helpful tool for scientific studies
 
-		\vspace{0.8cm}
+				   \vspace{0.8cm}
 
-	\end{center}
-\end{titlepage}
+		  \end{center}
+ \end{titlepage}
 
-\tableofcontents
+ \tableofcontents
 
-\chapter{Statistics}
-\subfile{Chapters/Statistics.tex}
+ \chapter{Statistics}
+  \subfile{Chapters/Statistics.tex}
 
-\chapter{Pure Physics}
-\subfile{Chapters/PurePhysics.tex}
+ \chapter{Pure Physics}
+  \subfile{Chapters/PurePhysics.tex}
 
-\chapter{Pure Chemistry}
-\subfile{Chapters/PureChemistry.tex}
+ \chapter{Pure Chemistry}
+  \subfile{Chapters/PureChemistry.tex}
 
-\chapter{Thermodynamics}
-\subfile{Chapters/Thermodynamics.tex}
+ \chapter{Thermodynamics}
+  \subfile{Chapters/Thermodynamics.tex}
 
-\chapter{Chemical Kinetics}
-\subfile{Chapters/ChemicalKinetics.tex}
+ \chapter{Chemical Kinetics}
+  \subfile{Chapters/ChemicalKinetics.tex}
 
-\chapter{Electrochemistry}
-\subfile{Chapters/Electrochemistry.tex}
+ \chapter{Electrochemistry}
+  \subfile{Chapters/Electrochemistry.tex}
 
-\chapter{Wape Phenomena}
-\subfile{Chapters/Waves.tex}
+ \chapter{Wape Phenomena}
+  \subfile{Chapters/Waves.tex}
 
-\end{document}
+ \end{document}
