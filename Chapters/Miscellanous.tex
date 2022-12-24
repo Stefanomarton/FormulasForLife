@@ -1,0 +1,70 @@
+\documentclass[../Master.tex]{subfiles}
+\begin{document}
+\begin{multicols*}{2}
+	\section{X-Ray Diffraction}
+	\subsection{Diffracted intensity}
+	\subsubsection{Monophasic Sample}
+	The intensity of diffraction for a generic hkl plane is:
+	\[
+		I_{hkl} = K_{e} K_{hkl} \frac{1}{2 \mu}
+	\]
+	\subsubsection{Polyphasic Sample}
+	The intensity of diffraction for a generic hkl plane is:
+	\[
+		I_{hkl, \ \alpha} = K_{e} K_{hkl, \alpha } \cdot w_{\alpha} \frac{1}{\mu _{m}^{*}  }
+	\]
+	\subsection{Internal Standard}
+	A standard must be added to the sample:
+	\[
+		\frac{I_{hkl~\alpha}}{I_{hkl~\beta} } = K \cdot \frac{w_{\alpha}}{w_{\beta}}
+	\]
+	Using a calibration curve one can obtain:
+	\begin{gather*}
+		\frac{I_{hkl~\alpha}}{I_{hkl~\beta} } = K\cdot \frac{w_{\alpha}}{w_{\beta}} \\
+		w_{\alpha} = \frac{I_{\alpha,hkl}}{I_{std,hkl}} \cdot \frac{w_{std}}{K_{\alpha,std} } \\
+		w_{\alpha, ini} = \frac{w_{\alpha}}{1-w_{std}}
+	\end{gather*}
+	\subsection{Relative Intensity Ration Method}
+	The same concept as internal standard is applied using corindone. The 113 coridone peak and the highest intensity	\( \alpha  \) peak are considered. \\
+	The RIR value can be found in databases like PDF.
+	\[
+		w_{\alpha} = \frac{I_{\alpha,hkl}}{I_{cor,113}} \cdot \frac{w_{std}}{RIR_{\alpha ,COR}  }
+	\]
+	\subsubsection{Generalized RIR}
+	It is possibile to use different corindone and alpha peak, also wit lower relative intensity.
+	\[
+		w_{\alpha} = \frac{I_{\alpha,hkl}}{I_{cor,hkl}} \cdot \frac{I_{cor,hkl}^{REL} }{I_{\alpha, hkl}^{REL}  }\cdot  \frac{w_{std}}{RIR_{\alpha,cor} }
+	\]
+	\subsubsection{Normalized RIR - Chung Equation}
+	\begin{gather*}
+		w_{i} =\left[ \left( \frac{RIR_{i}}{I_{i} } \right) \cdot \sum_{i=1} ^{n} \left( \frac{I_{i}}{RIR_{i} } \right)\right]^{-1} \\
+		I_{i}= \frac{I_{line,i}}{I_{i, REL}} \\
+		\text{if } \sum_{i=1}^{n} w_{i} = 1
+	\end{gather*}
+	\subsubsection{Amorphous determination}
+	A standard is added to the sample.\\
+	Using the normalization condition from the Chung equation it possibile to verify the presence of an amorphous phase:
+	\[
+		\sum_{i=1} ^{n} \left( \frac{I_{i}}{RIR_{i} } \right) >,=,< I_{cor}\left[ \frac{1-w_{cor} }{w_{cor} } \right]
+	\]
+	\begin{itemize}
+		\item if > something is wrong
+		\item if = there is no amorphous phase
+		\item if < thers is an amorphous phase
+	\end{itemize}
+	If the amorphous is present the weight fraction of the other componente must be corrected:
+	\[
+		w_{\text{i, corrected}}  = \frac{w_{\text{std, real}} }{w_{\text{std, calculated}} } \cdot w_{i}
+	\]
+	The amorphous can be quantified using:
+	\[
+		w_{\text{amorphous}} = 1 - \sum_{i=1}^{N} w_{\text{i, corrected}}
+	\]
+	\subsection{Thermal Gravimetic Analysis}
+	It's possibile to calculate the n multiple of the MW of the mass decrease/increase during a thermal event.
+	\begin{gather*}
+		A \to B + R \\
+		nPM(\text{R}) = \frac{m(\text{R})}{m(\text{A}) } \cdot  MW(\text{A})
+	\end{gather*}
+\end{multicols*}
+\end{document}
